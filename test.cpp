@@ -8,36 +8,17 @@ using ui = unsigned;
 using ull = unsigned long long;
 
 void solve() {
-    string s;
-    cin >> s;
-
-    int cnt = 0, n = s.length() - 4;
-    for (int i = 0; i <= n;) {
-        if (s[i] == '1' && s[i + 1] == '1' 
-            && s[i + 2] == '0' && s[i + 3] == '0') {
-            cnt++;
-            i += 4;
-        }
-        else i += 1;
+    int n;
+    cin >> n;
+    int a[n];
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
     }
-
-    int q;
-    cin >> q;
-
-    for (int k = 0; k < q; k++) {
-        int i; char v;
-        cin >> i >> v;
-        i -= 1;
-
-        int j = (i >= 3) ? i - 3 : 0;
-        bool found = s.substr(j, 7).find("1100") != string::npos;
-        s[i] = v;
-        bool check = s.substr(j, 7).find("1100") != string::npos;
-        if (!found && check) cnt++;
-        else if (found && !check) cnt--;
-       
-        if (cnt > 0) cout << "YES\n";
-        else cout << "NO\n";
+    int cnt = 0, res = INT_MAX;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < i; j++) {
+            if (a[i])
+        }
     }
 }
 
