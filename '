@@ -30,6 +30,8 @@ void solve() {
         cin >> k[i];
         cout << power(k[i]) << '\n';
     }
+    // for (int i = 0; i < t; i++) {
+    // }
 }
 
 int main() {
